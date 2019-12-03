@@ -74,6 +74,7 @@
 	background-color: transparent;
   }
   
+  /* .SlideNavItem > button:focus-visible */
   .SlideNavItem > button[aria-current="true"] {
 	background-color: hsla(0, 100%, 100%, 0.33);
   }
@@ -104,6 +105,9 @@
 	color: hsla(0, 100%, 100%, 0.5);
 	outline: none;
   }
+	.IconButton:hover {
+		cursor: pointer;
+	}
   
   button:active {
 	position: relative;

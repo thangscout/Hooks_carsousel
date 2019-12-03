@@ -100,6 +100,12 @@ export default function Dashboard(){
 						...state,
 						isPlaying: true
 					};
+
+				case "ENTER":
+					return {
+						...state,
+						isPlaying: !state.isPlaying
+					};
 				case "PREV":
 					return {
 						...state,
@@ -150,6 +156,9 @@ export default function Dashboard(){
 		}
 		if ( 37 === event.keyCode ) {
 			dispatch({ type: "PREV"});
+		}
+		if ( 13 === event.keyCode ) {
+			dispatch({ type: "ENTER"});
 		}
 	}
 
