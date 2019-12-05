@@ -5,6 +5,7 @@
   "dependencies": {
     "@reach/alert": "^0.6.2",
     "@reach/visually-hidden": "^0.6.2",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-icons": "^3.8.0",

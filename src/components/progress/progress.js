@@ -1,7 +1,7 @@
 import { useState, useEffect }  from "react";
 
-let Progress = ( animate, time ) => {
-	let [ progress, setProgress ] = useState(0);
+export default function Progress(animate, time) {
+	const [ progress, setProgress ] = useState(0);
 
 	useEffect(() => {
 		if ( animate) {
@@ -22,5 +22,3 @@ let Progress = ( animate, time ) => {
 
 	return animate ? Math.min(progress / time, time) : 0;
 }
-
-export default Progress;

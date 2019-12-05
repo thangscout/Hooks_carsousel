@@ -53,11 +53,10 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-  }
-  
-  .ProgressBar > div {
-	background-color: hsla(0, 100%, 100%, 0.25);
-	height: 20px;
+	> div {
+		background-color: hsla(0, 100%, 100%, 0.25);
+		height: 20px;
+	}
   }
   
   .SlideNavItem > button {
@@ -72,23 +71,19 @@
 	align-items: center;
 	justify-content: center;
 	background-color: transparent;
-  }
-  
-  /* .SlideNavItem > button:focus-visible */
-  .SlideNavItem > button[aria-current="true"] {
-	background-color: hsla(0, 100%, 100%, 0.33);
-  }
-  
-  .SlideNavItem > button > span {
-	background: hsla(0, 100%, 100%, 0.25);
-	display: inline-block;
-	border-radius: 50%;
-	height: 1rem;
-	width: 1rem;
-  }
-  
-  .SlideNavItem > button[aria-current="true"] > span {
-	background: hsla(0, 100%, 100%, 0.75);
+	&[aria-current="true"] {
+		background-color: hsla(0, 100%, 100%, 0.33);
+		> span {
+			background: hsla(0, 100%, 100%, 0.75);
+		}
+	}
+	> span {
+		background: hsla(0, 100%, 100%, 0.25);
+		display: inline-block;
+		border-radius: 50%;
+		height: 1rem;
+		width: 1rem;
+	}
   }
   
   .IconButton {
@@ -104,10 +99,11 @@
 	background-color: transparent;
 	color: hsla(0, 100%, 100%, 0.5);
 	outline: none;
+	&:focus-visible {
+		color: hsla(0, 100%, 100%, 0.75);
+		background-color: hsla(0, 100%, 100%, 0.33);
+	};
   }
-	.IconButton:hover {
-		cursor: pointer;
-	}
   
   button:active {
 	position: relative;
@@ -115,10 +111,6 @@
 	left: 1px;
   }
   
-  .IconButton:focus-visible {
-	color: hsla(0, 100%, 100%, 0.75);
-	background-color: hsla(0, 100%, 100%, 0.33);
-  }
   
   .Carousel {
 	position: absolute;
